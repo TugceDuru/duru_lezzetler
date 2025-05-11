@@ -6,8 +6,199 @@
     <title>DURU LEZZETLER - Lezzetli Tarifler</title>
     
     <link rel="stylesheet" href="/css/style.css">
+<style>
+        body {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f5f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .home {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../image/arkaplan.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .home-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .home-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .home-section p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .appointment-form {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #444;
+            font-size: 1.1rem;
+        }
+
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: #f9f9f9;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s;
+            width: 100%;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .submit-btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .recipe-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .recipe-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .recipe-card a {
+            margin-top: auto;
+            text-decoration: none;
+            background: #e74c3c;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            align-self: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-section {
+            padding: 40px 20px;
+            background: #fff;
+        }
+
+        .contact-section form {
+            margin-bottom: 30px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .home-section h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .home-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
+
    
     <header>
         <div class="container">
@@ -238,8 +429,8 @@
                     
                     <button type="submit" class="submit-btn">
                         <span class="btn-text">Randevu Al</span>
-                        <span class="btn-icon">→</span>
-                    </button>
+                        
+                    
                 </form>
             </div>
         </section>
@@ -306,9 +497,9 @@
                 
                 <p>DURU LEZZETLER'e hoş geldiniz! Lezzetli ve sağlıklı tarifler için doğru adrestesiniz. DURU LEZZETLERolarak, harika yemeklerin insanları bir araya getirdiğine inanıyoruz. Misyonumuz, kolayca uygulayabileceğiniz, ağız sulandıran tariflerle mutfaktaki yaratıcılığınıza ilham vermek. İster deneyimli bir şef olun, ister yeni tarifler denemek isteyen bir ev aşçısı, çeşitli yemek koleksiyonumuz her damak zevkine ve her özel duruma hitap ediyor. <br><br>
 
-                Tutkulu yemek meraklıları ve uzman şeflerden oluşan ekibimiz, size klasik ve yenilikçi mutfağın en iyilerini sunmak için sürekli olarak yeni tatlar ve pişirme teknikleri keşfediyor. Her yemeğin sadece lezzetli değil, aynı zamanda bedeninize ve ruhunuza da iyi gelmesi için taze, yüksek kaliteli malzemeler kullanmaya öncelik veriyoruz. Yum Yard'da, adım adım talimatlar ve faydalı ipuçlarıyla birlikte, hızlı hafta içi yemeklerinden etkileyici gurme yaratımlarına kadar birçok tarif bulacaksınız. <br><br>
+                Tutkulu yemek meraklıları ve uzman şeflerden oluşan ekibimiz, size klasik ve yenilikçi mutfağın en iyilerini sunmak için sürekli olarak yeni tatlar ve pişirme teknikleri keşfediyor. Her yemeğin sadece lezzetli değil, aynı zamanda bedeninize ve ruhunuza da iyi gelmesi için taze, yüksek kaliteli malzemeler kullanmaya öncelik veriyoruz. Duru Lezzetler'de, adım adım talimatlar ve faydalı ipuçlarıyla birlikte, hızlı hafta içi yemeklerinden etkileyici gurme yaratımlarına kadar birçok tarif bulacaksınız. <br><br>
 
-                Yemek severlerden oluşan canlı topluluğumuza katılın, kendi mutfak yaratımlarınızı paylaşın ve her gün yeni favoriler keşfedin. İster kendiniz, ister aileniz için yemek yapın, ister arkadaşlarınızla bir araya gelin, Yum Yard her öğünü keyifli bir deneyime dönüştürmek için burada. Mutfak maceralarınızda güvenilir bir yol arkadaşı olalım ve birlikte, bir tarif bir tarif lezzetli anılar yaratalım!</p>
+                Yemek severlerden oluşan canlı topluluğumuza katılın, kendi mutfak yaratımlarınızı paylaşın ve her gün yeni favoriler keşfedin. İster kendiniz, ister aileniz için yemek yapın, ister arkadaşlarınızla bir araya gelin, Duru Lezzetler her öğünü keyifli bir deneyime dönüştürmek için burada. Mutfak maceralarınızda güvenilir bir yol arkadaşı olalım ve birlikte, bir tarif bir tarif lezzetli anılar edinelim!</p>
             </div>
     </section>
 
