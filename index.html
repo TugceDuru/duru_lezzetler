@@ -613,5 +613,47 @@
             <p>&copy; 2024 DURU LEZZETLER- Tüm Hakları Saklıdır</p>
         </div>
     </footer>
+ <script>
+        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const menu = document.getElementById('menu').value;
+
+            if (!name || !phone || !email || !date || !time || !menu) {
+                alert('Lütfen tüm gerekli alanları doldurunuz!');
+                return;
+            }
+
+            const appointment = {
+                name: name,
+                phone: phone,
+                email: email,
+                date: date,
+                time: time,
+                menu: menu,
+                notes: document.getElementById('notes').value.trim(),
+                id: Date.now(),
+                createdAt: new Date().toISOString()
+            };
+
+            try {
+                let appointments = JSON.parse(localStorage.getItem('appointments')) || [];
+                appointments.push(appointment);
+                localStorage.setItem('appointments', JSON.stringify(appointments));
+                alert('Randevunuz başarıyla alındı! Teşekkür ederiz.');
+                window.location.href = 'randevular.html';
+                this.reset();
+            } catch (error) {
+                console.error('Hata:', error);
+                alert('Bir hata oluştu, lütfen tekrar deneyiniz.');
+            }
+        });
+
+        document.getElementById('date').min = new Date().toISOString().split('T')[0];
+    </script>
 </body>
 </html>
