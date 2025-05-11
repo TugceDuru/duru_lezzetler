@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DURU LEZZETLER - Lezzetli Tarifler</title>
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+   
+    <header>
+        <div class="container">
+            <h1 class="logo">DURU LEZZETLER</h1>
+            <nav>
+               
+                <ul class="nav-list">
+                    <li><a href="#Home">Ana Sayfa</a></li>
+                    <li><a href="#About">Hakkımızda</a></li>
+                    <li><a href="#Recipes">Tarifler</a></li>
+                    <li><a href="liste.html">Randevu Listesi</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+   
+
+
+
+    
+        <title>Duru Lezzetler - Aşçıyla Yemek Atölyesi</title>
+        <style>
+            
+            body {
+                font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f9f5f0;
+                color: #333;
+                line-height: 1.6;
+            }
+            
+           
+            .home {
+                padding: 80px 20px;
+                text-align: center;
+                background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('..//image/arkaplan.jpg') no-repeat center center;
+                background-size: cover;
+                color: white;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .home-section {
+                max-width: 800px;
+                margin: 0 auto;
+                
+            }
+            
+            .home-section h2 {
+                font-size: 2.8rem;
+                margin-bottom: 20px;
+                font-weight: 700;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            }
+            
+            .home-section p {
+                font-size: 1.3rem;
+                margin-bottom: 40px;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            }
+            
+            .appointment-form {
+                background-color: rgba(255, 255, 255, 0.95);
+                padding: 40px;
+                border-radius: 15px;
+                max-width: 600px;
+                margin: 0 auto;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                
+            }
+            
+            
+            
+            .form-group {
+                margin-bottom: 25px;
+                text-align: left;
+            }
+            
+            .form-group label {
+                display: block;
+                margin-bottom: 10px;
+                font-weight: 600;
+                color: #444;
+                font-size: 1.1rem;
+            }
+            
+            .form-group input, 
+            .form-group select, 
+            .form-group textarea {
+                width: 100%;
+                padding: 14px;
+                border: 2px solid #ddd;
+                border-radius: 8px;
+                font-size: 1rem;
+                background-color: #f9f9f9;
+            }
+            
+           
+            
+            .form-group textarea {
+                resize: vertical;
+                min-height: 100px;
+            }
+            
+            .submit-btn {
+                background-color: #e74c3c;
+                color: white;
+                border: none;
+                padding: 16px 40px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                border-radius: 8px;
+                transition: all 0.3s;
+                width: 100%;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            .submit-btn:hover {
+                background-color: #c0392b;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+            }
+            
+            .submit-btn:active {
+                transform: translateY(0);
+            }
+            
+            
+           
+            @media (max-width: 768px) {
+                .home {
+                    padding: 60px 15px;
+                }
+                
+                .home-section h2 {
+                    font-size: 2.2rem;
+                }
+                
+                .home-section p {
+                    font-size: 1.1rem;
+                }
+                
+                .appointment-form {
+                    padding: 30px 20px;
+                }
+            }
+            
+            @media (max-width: 480px) {
+                .home-section h2 {
+                    font-size: 1.8rem;
+                }
+                
+                .form-group input, 
+                .form-group select, 
+                .form-group textarea {
+                    padding: 12px;
+                }
+                
+                .submit-btn {
+                    padding: 14px 20px;
+                }
+            }
+        </style>
+        
+  
+    <body>
+        <section class="home" id="Home">
+            <div class="home-section">
+                <h2>Duru Lezzetler'de Aşçıyla Yemek Yapın!</h2>
+                <p>Profesyonel şeflerle birlikte mutfak becerilerinizi geliştirin, unutulmaz bir deneyim yaşayın</p>
+                
+                <form class="appointment-form" id="appointmentForm">
+                    <div class="form-group">
+                        <label for="name">Ad Soyad</label>
+                        <input type="text" id="name" name="name" required placeholder="Adınız ve soyadınız">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Telefon</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="5__ ___ __ __">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-posta</label>
+                        <input type="email" id="email" name="email" required placeholder="email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Randevu Tarihi</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="time">Randevu Saati</label>
+                        <select id="time" name="time" required>
+                            <option value="">Seçiniz</option>
+                            <option value="10:00">10:00 - 12:00</option>
+                            <option value="12:00">12:00 - 14:00</option>
+                            <option value="14:00">14:00 - 16:00</option>
+                            <option value="16:00">16:00 - 18:00</option>
+                            <option value="18:00">18:00 - 20:00</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="menu">Menü Seçimi</label>
+                        <select id="menu" name="menu" required>
+                            <option value="">Bir menü seçiniz</option>
+                            <option value="Türk Mutfağı">🍽️ Türk Mutfağı</option>
+                            <option value="İtalyan Mutfağı">🍕 İtalyan Mutfağı</option>
+                            <option value="Fransız Mutfağı">🥖 Fransız Mutfağı</option>
+                            <option value="Asya Mutfağı">🍜 Asya Mutfağı</option>
+                            <option value="Vegan Mutfağı">🌱 Vegan Mutfağı</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notes">Özel Notlar</label>
+                        <textarea id="notes" name="notes" rows="4" placeholder="Özel istekleriniz, alerjileriniz veya eklemek istedikleriniz..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Randevu Al</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+    
+        <script>
+            document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                
+                const name = document.getElementById('name').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const date = document.getElementById('date').value;
+                const time = document.getElementById('time').value;
+                const menu = document.getElementById('menu').value;
+                
+                if (!name || !phone || !email || !date || !time || !menu) {
+                    alert('Lütfen tüm gerekli alanları doldurunuz!');
+                    return;
+                }
+                
+               
+                const appointment = {
+                    name: name,
+                    phone: phone,
+                    email: email,
+                    date: date,
+                    time: time,
+                    menu: menu,
+                    notes: document.getElementById('notes').value.trim(),
+                    id: Date.now(), 
+                    createdAt: new Date().toISOString()
+                };
+                
+                try {
+                    
+                    let appointments = JSON.parse(localStorage.getItem('appointments')) || [];
+                    appointments.push(appointment);
+                    localStorage.setItem('appointments', JSON.stringify(appointments));
+                    
+                    
+                    alert('Randevunuz başarıyla alındı! Teşekkür ederiz.');
+                    
+                    
+                    window.location.href = 'randevular.html';
+                    
+                    
+                    this.reset();
+                } catch (error) {
+                    console.error('Hata:', error);
+                    alert('Bir hata oluştu, lütfen tekrar deneyiniz.');
+                }
+            });
+            
+            
+            document.getElementById('date').min = new Date().toISOString().split('T')[0];
+        </script>
+    </body>
+    </html>
+    
+    <section class="about" id="About">
+                <h2>Hakkımızda</h2>
+            <div class="about-section">
+                
+                <p>DURU LEZZETLER'e hoş geldiniz! Lezzetli ve sağlıklı tarifler için doğru adrestesiniz. DURU LEZZETLERolarak, harika yemeklerin insanları bir araya getirdiğine inanıyoruz. Misyonumuz, kolayca uygulayabileceğiniz, ağız sulandıran tariflerle mutfaktaki yaratıcılığınıza ilham vermek. İster deneyimli bir şef olun, ister yeni tarifler denemek isteyen bir ev aşçısı, çeşitli yemek koleksiyonumuz her damak zevkine ve her özel duruma hitap ediyor. <br><br>
+
+                Tutkulu yemek meraklıları ve uzman şeflerden oluşan ekibimiz, size klasik ve yenilikçi mutfağın en iyilerini sunmak için sürekli olarak yeni tatlar ve pişirme teknikleri keşfediyor. Her yemeğin sadece lezzetli değil, aynı zamanda bedeninize ve ruhunuza da iyi gelmesi için taze, yüksek kaliteli malzemeler kullanmaya öncelik veriyoruz. Yum Yard'da, adım adım talimatlar ve faydalı ipuçlarıyla birlikte, hızlı hafta içi yemeklerinden etkileyici gurme yaratımlarına kadar birçok tarif bulacaksınız. <br><br>
+
+                Yemek severlerden oluşan canlı topluluğumuza katılın, kendi mutfak yaratımlarınızı paylaşın ve her gün yeni favoriler keşfedin. İster kendiniz, ister aileniz için yemek yapın, ister arkadaşlarınızla bir araya gelin, Yum Yard her öğünü keyifli bir deneyime dönüştürmek için burada. Mutfak maceralarınızda güvenilir bir yol arkadaşı olalım ve birlikte, bir tarif bir tarif lezzetli anılar yaratalım!</p>
+            </div>
+    </section>
+
+    
+    <section class="recipes" id="Recipes">
+        <h1>Öne Çıkan Tarifler</h1>
+        <head>
+  <style>
+    
+   .recipe-card {
+  display: flex;
+  flex-direction: column;
+  height: auto; 
+  min-height: 300px; 
+   }
+.recipe-card a {
+  margin-top: auto; 
+  align-self: center; 
+  width: 100%; 
+  margin-bottom: 15px; 
+}
+    
+  </style>
+</head>
+
+        <div class="recipe-section">
+            <div class="recipe-card">
+                
+                <h2>Limonata</h2>
+                <p>Limonata, ferahlatıcı ve aromatik bir içecektir. Yaz sıcaklarında vitaminli bir tercihitr.              </p>
+                <a href="limonata.html" target="_blank">Tarifi Gör</a>
+            </div>
+
+            <div class="recipe-card">
+                
+                <h2>Pizza</h2>
+                <p>Pizza, ince hamur üzerine çeşitli malzemelerle yapılan popüler bir İtalyan yemeğidir. </p>
+                <a href="pizza.html" target="_blank">Tarifi Gör</a>
+            </div>
+
+            <div class="recipe-card">
+                
+                <h2>Lahmacun</h2>
+                <p>Lahmacun, kıymalı baharatlı harcı ile çıtır çıtır hamuru ile güneydoğunun lezzetidir.             </p>
+                <a href="lahmacun.html" target="_blank">Tarifi Gör</a>
+            </div>
+
+            <div class="recipe-card">
+                
+                <h2>Kek</h2>
+                <p>Kek, genellikle un, şeker, yumurta ve yağ kullanılarak yapılan tatlı bir fırın ürünüdür.          </p>
+                <a href="kek.html" target="_blank">Tarifi Gör</a>
+            </div>
+
+            <div class="recipe-card">
+                
+                <h2>Karamel</h2>
+                <p>Karamel, şekerin ısıtılmasıyla elde edilen altın kahverengi, tatlı ve yoğun bir maddedir.         </p>
+                <a href="karamel.html" target="_blank">Tarifi Gör</a>
+            </div>
+
+            <div class="recipe-card">
+                
+                <h2>Burger</h2>
+                <p>Burger, genellikle ekmek arasında köfte ve çeşitli soslarla hazırlanan bir sandviç türüdür.       </p>
+                <a href="burger.html" target="_blank">Tarifi Gör</a>
+            </div>
+
+            <div class="recipe-card">
+                
+                <h2>Sushi</h2>
+                <p>Sushi, sirke ile tatlandırılmış pirinç ve çiğ balık/deniz ürünleriyle Japon yemeğidir.</p>
+                <a href="sushi.html" target="_blank">Tarifi Gör</a>
+            </div>
+
+            <div class="recipe-card">
+                
+                <h2>Makarna</h2>
+                <p>Special Makarna sos, peynir ve bazen et veya çeşitli bahartlarla yapılan bir yemektir.           </p>
+                <a href="makarna.html" target="_blank">Tarifi Gör</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <div class="contact-section" id="Contact">
+        <h2>Bize Ulaşın</h2>
+        <form action="#" method="post">
+            <label for="name">Adınız:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Mesajınız:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <input type="submit" value="Gönder">
+        </form>
+        <div class="contact-info">
+            <h3>İletişim Bilgileri</h3>
+            <p>E-posta: duru@gmail.com</p>
+            <p>Telefon: (+90) 555 123 45 67</p>
+            <p>Adres: Lezzet Sokak, Ankara, Türkiye</p>
+        </div>
+    </div>
+
+    
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 DURU LEZZETLER- Tüm Hakları Saklıdır</p>
+        </div>
+    </footer>
+</body>
+</html>
